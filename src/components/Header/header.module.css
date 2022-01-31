@@ -1,0 +1,24 @@
+.headerWrapper{
+    width: 100%;
+    background-color: aliceblue;
+}
+.header {
+    width: 100%;
+    max-width: 1100px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 30px 0 30px;
+    margin: 0 auto;
+}
+.navOptions a {
+    display: inline-block;
+    margin: 5px;
+}
+.icons svg {
+    margin: 5px;
+    width: 20px;
+    height: 20px;
+}

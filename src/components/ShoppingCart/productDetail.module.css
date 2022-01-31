@@ -1,0 +1,19 @@
+.wrapperProduct {
+    display: flex;
+    margin-bottom: 30px;
+    align-items: center;
+}
+.wrapperProduct h3 {
+    line-height: 20px;
+    font-size: 18px;
+}
+.wrapperProduct p {
+    margin: 5px 0;
+}
+.wrapperProduct img {
+    max-height: 86px;
+    max-width: 86px;
+    height: auto;
+    width: auto;
+    margin-right: 30px;
+}

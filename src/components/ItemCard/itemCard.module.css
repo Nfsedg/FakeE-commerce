@@ -1,0 +1,32 @@
+.cardWrapper {
+    width: 280px;
+}
+.imageWrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 280px;
+    height: 280px;
+    position: relative;
+}
+.imageWrapper div {
+    display: inline-block;
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+}
+img {
+    display: block;
+    max-width:230px;
+    max-height:180px;
+    width: auto;
+    height: auto;
+}
+.infoWrapper {
+    display: flex;
+}
+.infoWrapper h3 {
+    line-height: 20px;
+    font-size: 18px;
+    font-weight: 500;
+}

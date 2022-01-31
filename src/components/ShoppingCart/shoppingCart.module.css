@@ -1,0 +1,11 @@
+.wrapper{
+    position: fixed;
+    top: 64px;
+    right: 0;
+
+    width: 460px;
+    height: calc(100vh - 64px);
+    overflow-x: scroll;
+    background-color: white;
+    padding: 20px;
+}
