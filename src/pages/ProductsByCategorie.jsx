@@ -1,14 +1,14 @@
 import React from 'react';
-import { Outlet, useParams } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 import { useGetCategories } from '../hooks/useGetCategories';
 import { ItemCard } from '../components/ItemCard';
 import style from './stlyes/productByCategory.module.css';
 
 export const ProductsByCategorie = () => {
     const [render, setRender] = React.useState(false);
-    let params = useParams();
-    const { categoriesData } = useGetCategories(params.category, render);
-    console.log(render)
+    let { category } = useParams();
+    const { categoriesData } = useGetCategories(category, category);
+    console.log('render')
 
     if(categoriesData.length <= 0) {
         return(
@@ -22,7 +22,6 @@ export const ProductsByCategorie = () => {
                     {categoriesData.map(ele => (
                         <ItemCard key={ele.id} id={ele.id} img={ele.image} price={ele.price} title={ele.title} rate={ele.rating.rate}/>
                     ))}
-                    <Outlet/>
                 </div>
             </React.Fragment>
         );

@@ -1,14 +1,26 @@
-import React from 'react';
-import { useInitialState } from '../../hooks/useInitialState';
+import React, { useState } from 'react';
+import { Login } from './LogIn';
 
 export const ProfileCard = () => {
-    const { token } = useInitialState();
-    console.log(token)
+    const [ user, setUser ] = useState('')
+    const [ username, setUserName ] = useState('')
+    const [ password, setPassword ] = useState('')
 
     return(
         <div>
-            <img src="" alt="" />
-            <h2>User1</h2>
+            {
+                user
+                    ? <div><p>Hello User 1</p><button onClick={() => setUser('')}>Logout</button></div>
+                    : <Login 
+                    user={user} 
+                    setUser={setUser} 
+                    username={username}
+                    password={password}
+                    setPassword={setPassword}
+                    setUserName={setUserName}
+                    />
+            }
+            
         </div>
     )
 }

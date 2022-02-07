@@ -3,16 +3,16 @@ import {useState, useEffect} from 'react';
 import axios from "axios";
 
 export const useGetCategories = (categorieOption, render = undefined) => {
-    const [selectedCategorie, setSelectedCategorie] = useState("");
     const [categoriesData, setCategoriesData] = useState([]);
 
-    let API = `https://fakestoreapi.com/products/category/${categorieOption}`;
-
     useEffect(() => {
+        let API = `https://fakestoreapi.com/products/category/${categorieOption}`;
         axios.get(API)
             .then(response => setCategoriesData(response.data))
             .catch(e => console.warn(e));
+        
+        return undefined;
     }, [render]);
 
-    return { categoriesData, setSelectedCategorie };
+    return { categoriesData };
 };
